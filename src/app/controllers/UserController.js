@@ -8,7 +8,8 @@ class UserController {
 
     if(!clients) {
       return res.status(400).json({
-        errorMessage: "Não há usuários cadastrados."
+        success: false,
+        message: "Não há usuários cadastrados."
       });
     }
   
@@ -22,7 +23,8 @@ class UserController {
 
     if(emailExists) {
       return res.status(400).json({
-        errorMessage: "Email já utilizado."
+        success: false,
+        message: "Email já utilizado."
       });
     }
 
@@ -30,7 +32,8 @@ class UserController {
 
     if(loginExists) {
       return res.status(400).json({
-        errorMessage: "Login já utilizado."
+        success: false,
+        message: "Login já utilizado."
       });
     }
     
@@ -52,7 +55,8 @@ class UserController {
   
     if(!client) {
       return res.status(400).json({
-        errorMessage: "Usuário não encontrado."
+        success: false,
+        message: "Usuário não encontrado."
       });
     }
 
@@ -66,7 +70,8 @@ class UserController {
 
     if(!client) {
       return res.status(400).json({
-        errorMessage: "Usuário não encontrado."
+        success: false,
+        message: "Usuário não encontrado."
       });
     }
   
@@ -86,7 +91,8 @@ class UserController {
     
     if(!client) {
       return res.status(400).json({
-        errorMessage: "Usuário não encontrado."
+        success: false,
+        message: "Usuário não encontrado."
       });
     }
 

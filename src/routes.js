@@ -8,8 +8,8 @@ import SessionController from './app/controllers/SessionController';
 const routes = new Router();
 
 // Session
-routes.get('/login', SessionController.create);
-routes.delete('/logout/:id', SessionController.destroy);
+routes.post('/sessions', SessionController.create);
+routes.delete('/sessions/:id', SessionController.destroy);
 
 // Clients
 routes.get('/clients', authMiddleware, UserController.list);
