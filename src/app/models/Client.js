@@ -1,0 +1,16 @@
+import { Sequelize, DataTypes } from 'sequelize';
+
+import databaseConfig from '../../config/database';
+
+const sequelize = new Sequelize(databaseConfig);
+
+const Client = sequelize.define('Client', {
+  nome: { type: DataTypes.STRING, allowNull: false },
+  endereco: { type: DataTypes.STRING, allowNull: false },
+  email: { type: DataTypes.STRING, allowNull: false },
+  login: { type: DataTypes.STRING, allowNull: false },
+  senha: { type: DataTypes.STRING, allowNull: false },
+  token: { type: DataTypes.STRING },
+}, {});
+
+export default Client;
