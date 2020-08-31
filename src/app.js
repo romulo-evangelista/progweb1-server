@@ -1,6 +1,7 @@
 import express from 'express';
-import connection from './database/connection';
+import cors from 'cors';
 
+import connection from './database/connection';
 import routes from './routes';
 
 class App {
@@ -21,6 +22,7 @@ class App {
   middlewares() {
     this.express.use(express.json());
     this.express.use(express.urlencoded({ extended: false }));
+    this.express.use(cors());
   }
 
   routes() {
