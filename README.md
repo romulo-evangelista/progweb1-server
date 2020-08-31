@@ -10,6 +10,7 @@ As entidades proposta no trabalho são:
 
 ### Camada de modelo das entidades
 ![](/files/readme/models/models.gif)
+*Gif mostrando a camada de Modelo das Entidades* 
 
 ## Tabelas
 ### Entidades 
@@ -45,4 +46,11 @@ As entidades proposta no trabalho são:
 
 `DELETE` /clients/:id - Deleta o usuário com `id` passado na rota;
 
+
+## Autenticação e sessão de usuário
+Com o uso do JSON Web Token (JWT) pude controlar a autenticaçaõ e autorização dos usuários, assim como a sessão de usuário.
+
 ![](/files/readme/routes/routes.gif)
+*Gif de exemplo de uso das rotas e autenticação com JWT* 
+
+
