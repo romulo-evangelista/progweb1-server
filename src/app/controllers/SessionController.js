@@ -15,6 +15,8 @@ class SessionController {
 
     const user = client ? client : administrator;
 
+    const userType = client ? 'client' : 'admin';
+
     if(!user) {
       return res.status(400).json({
         success: false,
@@ -44,7 +46,7 @@ class SessionController {
 
     await user.update({ token });
 
-    return res.status(200).json({ id, token });
+    return res.status(200).json({ id, token, userType });
   }
 
   async destroy(req, res) {
