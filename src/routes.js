@@ -4,6 +4,7 @@ import authMiddleware from './app/middlewares/auth';
 
 import SessionController from './app/controllers/SessionController';
 import UserController from './app/controllers/UserController';
+import AdminController from './app/controllers/AdminController';
 import ProductController from './app/controllers/ProductController';
 import CategoryController from './app/controllers/CategoryController';
 
@@ -19,6 +20,13 @@ routes.get('/clients/:id', authMiddleware, UserController.findOne);
 routes.post('/clients', UserController.create);
 routes.put('/clients/:id', authMiddleware, UserController.update);
 routes.delete('/clients/:id', authMiddleware, UserController.delete);
+
+// Administrators
+routes.get('/administrators', authMiddleware, AdminController.list);
+routes.get('/administrators/:id', authMiddleware, AdminController.findOne);
+routes.post('/administrators', AdminController.create);
+routes.put('/administrators/:id', authMiddleware, AdminController.update);
+routes.delete('/administrators/:id', authMiddleware, AdminController.delete);
 
 // Products
 routes.get('/products', ProductController.list);
