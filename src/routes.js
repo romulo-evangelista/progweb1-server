@@ -7,6 +7,7 @@ import UserController from './app/controllers/UserController';
 import AdminController from './app/controllers/AdminController';
 import ProductController from './app/controllers/ProductController';
 import CategoryController from './app/controllers/CategoryController';
+import PurchaseController from './app/controllers/PurchaseController';
 
 const routes = new Router();
 
@@ -41,5 +42,9 @@ routes.get('/categories/:id', CategoryController.findOne);
 routes.post('/categories', authMiddleware, CategoryController.create);
 routes.put('/categories/:id', authMiddleware, CategoryController.update);
 routes.delete('/categories/:id', authMiddleware, CategoryController.delete);
+
+// Purchases
+routes.get('/purchases', PurchaseController.list);
+routes.post('/purchases', authMiddleware, PurchaseController.create);
 
 export default routes;

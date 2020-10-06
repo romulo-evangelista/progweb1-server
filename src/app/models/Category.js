@@ -4,8 +4,6 @@ import databaseConfig from '../../config/database';
 
 const sequelize = new Sequelize(databaseConfig);
 
-const Category = sequelize.define('Category', {
+export const Category = sequelize.define('categories', {
   descricao: { type: DataTypes.TEXT, allowNull: false },
 }, {});
-
-export default Category;

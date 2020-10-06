@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt';
 
-import Client from '../models/Client';
+import { Client } from '../models/index';
 
 class UserController {
   async list(req, res) {

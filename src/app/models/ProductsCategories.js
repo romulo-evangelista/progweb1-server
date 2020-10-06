@@ -4,7 +4,7 @@ import databaseConfig from '../../config/database';
 
 const sequelize = new Sequelize(databaseConfig);
 
-const ProductsCategories = sequelize.define('ProductsCategories', {
+export const ProductsCategories = sequelize.define('products_categories', {
   product_id: {
     type: DataTypes.NUMBER,
     references: 'products',
@@ -19,5 +19,3 @@ const ProductsCategories = sequelize.define('ProductsCategories', {
 }, {
   tableName: 'products_categories',
 });
-
-export default ProductsCategories;
