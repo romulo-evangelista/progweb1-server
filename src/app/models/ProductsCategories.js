@@ -19,3 +19,5 @@ export const ProductsCategories = sequelize.define('products_categories', {
 }, {
   tableName: 'products_categories',
 });
+
+export default ProductsCategories;

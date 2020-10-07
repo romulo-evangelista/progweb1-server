@@ -1,4 +1,4 @@
-import { Category } from '../models/index';
+import Category from '../models/Category';
 
 class CategoryController {
   async list(req, res) {

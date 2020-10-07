@@ -14,3 +14,5 @@ export const Purchase = sequelize.define('purchases', {
     referencesKey: 'id',
   },
 }, {});
+
+export default Purchase;

@@ -1,7 +1,8 @@
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
-import { Client, Administrator } from '../models/index';
+import Client from '../models/Client';
+import Administrator from '../models/Administrator';
 
 import authConfig from '../../config/auth';
 

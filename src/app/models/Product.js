@@ -9,3 +9,5 @@ export const Product = sequelize.define('products', {
   preco: { type: DataTypes.NUMBER, allowNull: false },
   quantidade: { type: DataTypes.NUMBER, allowNull: false },
 }, {});
+
+export default Product;

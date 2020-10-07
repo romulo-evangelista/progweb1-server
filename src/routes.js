@@ -45,6 +45,7 @@ routes.delete('/categories/:id', authMiddleware, CategoryController.delete);
 
 // Purchases
 routes.get('/purchases', PurchaseController.list);
+routes.get('/purchases/clients/:client_id', PurchaseController.listByClient);
 routes.post('/purchases', authMiddleware, PurchaseController.create);
 
 export default routes;

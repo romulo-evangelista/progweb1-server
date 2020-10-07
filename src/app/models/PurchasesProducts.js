@@ -23,3 +23,5 @@ export const PurchasesProducts = sequelize.define('purchases_products', {
 }, {
   tableName: 'purchases_products',
 });
+
+export default PurchasesProducts;

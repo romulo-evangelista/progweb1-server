@@ -11,3 +11,5 @@ export const Administrator = sequelize.define('administrators', {
   senha: { type: DataTypes.STRING, allowNull: false },
   token: { type: DataTypes.STRING },
 }, {});
+
+export default Administrator;

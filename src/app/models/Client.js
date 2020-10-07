@@ -12,3 +12,5 @@ export const Client = sequelize.define('clients', {
   senha: { type: DataTypes.STRING, allowNull: false },
   token: { type: DataTypes.STRING },
 }, {});
+
+export default Client;

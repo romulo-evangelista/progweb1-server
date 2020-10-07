@@ -1,6 +1,6 @@
 import bcrypt from 'bcrypt';
 
-import { Administrator } from '../models/index';
+import Administrator from '../models/Administrator';
 
 class AdminController {
   async list(req, res) {

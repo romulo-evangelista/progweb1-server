@@ -1,4 +1,4 @@
-import { Product } from '../models/index';
+import Product from '../models/Product';
 
 class ProductController {
   async list(req, res) {
